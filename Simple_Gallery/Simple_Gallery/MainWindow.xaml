@@ -1,0 +1,32 @@
+﻿<Window x:Class="Simple_Gallery.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="600" Width="950" Background="#FFD49F9F">
+    <Grid Background="#FFBCF3F3" Name="grid" Margin="0,0,0,4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="86*"/>
+            <RowDefinition Height="162*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="199*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Image Name="mainImg" Grid.RowSpan="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10,0,0,10">
+        </Image>
+        <Button Grid.Row="4" FontSize="20" Name="btnFolder" Content="Выбор папки" Margin="22,104,440,49" Click="btnFolder_Click"/>
+        <Expander Name="expander" Grid.Row="4" Margin="257,80,249,49">
+            <TextBlock Name="txtBlock" Margin="10,10,10,10"/>
+        </Expander>
+        <ProgressBar Name="progressBar" Grid.Row="4" Margin="10,10,10,156" ValueChanged="progressBar_ValueChanged"/>
+        <Slider Name="slider" Grid.Row="3" Margin="5,5,8,5" Minimum="100" Maximum="660" IsSelectionRangeEnabled="True" ValueChanged="slider_ValueChanged">
+
+        </Slider>
+        <ScrollViewer Grid.RowSpan="5" Grid.ColumnSpan="2" Margin="672,0,5,0">
+            <StackPanel Name="stackPanel" Orientation="Vertical"></StackPanel>
+        </ScrollViewer>
+        <ListBox Name="list" HorizontalAlignment="Left" Height="80" Margin="447,83,0,0" Grid.Row="4" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.581,0.872"/>
+    </Grid>
+</Window>
